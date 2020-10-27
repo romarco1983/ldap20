@@ -4,7 +4,7 @@ delete: olcAccess
 -
 add: olcAccess	
 olcAccess: to attrs=userPassword
-  by dn.exact="cn=Pere Pou,ou=usuaris,dc=edt,dc=org" write
+  by dn.exact=cn="Pere Pou,ou=usuaris,dc=edt,dc=org" write
   by dn.exact="cn=Anna Pou,ou=usuaris,dc=edt,dc=org" none
   by self read
   by * auth
