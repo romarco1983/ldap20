@@ -1,0 +1,18 @@
+dn: olcDatabase={1}mdb,cn=config
+changetype: modify
+delete: olcAccess
+-
+add: olcAccess	
+oldAccess: to attrs=userPassword
+ by dn.exact=Pere Pou,ou=usuaris,dc=edt,dc=org write
+ by dn.exact=Anna Pou,ou=usuaris,dc=edt,dc=org none
+ by self read
+ by * auth
+oldAccess: to attr=mail,homePhone
+ by dn.exact=Pere Pou,ou=usuaris,dc=edt,dc=org write
+ by dn.exact=Anna Pou,ou=usuaris,dc=edt,dc=org write
+ by self write
+oldAccess: to * 
+ by dn.exact=Pere Pou,ou=usuaris,dc=edt,dc=org write
+ by dn.exact=Anna Pou,ou=usuaris,dc=edt,dc=org write
+ by self read
