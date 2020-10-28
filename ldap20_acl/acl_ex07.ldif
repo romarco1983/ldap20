@@ -7,4 +7,5 @@ olcAccess: to attrs=userPassword
   by self write
   by * auth
 olcAccess: to *
-  by self read
+  by * read
+  by * search
