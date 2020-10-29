@@ -12,5 +12,5 @@ olcAccess: to attr=mail,homePhone
   by self write
 olcAccess: to * 
   by dn.exact="cn=Anna Pou,ou=usuaris,dc=edt,dc=org" write
-  by self write
+  by self read
   by * search
