@@ -1,3 +1,4 @@
+
 # futbolista schema
 # 
 # x-equip
@@ -6,7 +7,7 @@
 # x-foto
 # x-lesionat
 #
-# ---------------
+# -------------------------
 
 attributetype ( 1.1.2.1.1 NAME 'x-equip'
     DESC 'nom del equip'
@@ -18,22 +19,25 @@ attributetype ( 1.1.2.1.1 NAME 'x-equip'
 attributetype ( 1.1.2.1.2 NAME 'x-dorsal'
     DESC 'dorsal del jugador'
     EQUALITY integerMatch
-    ORDERIND integerOrderingMatch
+    ORDERING integerOrderingMatch
     SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
     SINGLE-VALUE )
 
 attributetype ( 1.1.2.1.3 NAME 'x-web'
-    DESC 'pàgines webs del jugador'
-    SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 )
+    DESC 'pagina(s) web del jugador'
+    SYNTAX 1.3.6.1.4.1.1466.115.121.1.26
+    )
 
 attributetype ( 1.1.2.1.4 NAME 'x-photo'
-    DESC 'fotografia del jugador'
-    SYNTAX 1.3.6.1.4.1.1466.115.121.1.28 )
+    DESC 'fotografia dle jugador'
+    SYNTAX 1.3.6.1.4.1.1466.115.121.1.28
+    )
 
 attributetype ( 1.1.2.1.5 NAME 'x-lesionat'
     DESC 'true/false lesionat'
     SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
-    SINGLE-VALUE )
+    SINGLE-VALUE
+    )
 
 attributetype ( 1.1.2.1.6 NAME 'x-lonom'
     DESC 'lo nom de lo jugador'
@@ -43,10 +47,9 @@ attributetype ( 1.1.2.1.6 NAME 'x-lonom'
     SINGLE-VALUE )
 
 objectclass ( 1.1.2.2.1 NAME 'x-Futbolista'
-DESC 'Futboleros crazys'
-SUP inetOrgPerson
-STRUCTURAL
-MUST x-equip
-MAY ( x-dorsal $ x $ x-web $ x-photo $ x-lesionat )
-)
-
+    DESC 'Futboleros crazys'
+    SUP TOP
+    AUXILIARY
+    MUST x-equip 
+    MAY ( x-lonom $ x-dorsal $ x-web $ x-photo $ x-lesionat ) 
+    )
