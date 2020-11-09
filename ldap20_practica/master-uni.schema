@@ -1,0 +1,55 @@
+# master-uni.schema
+#
+# x-aprovat
+# x-nomMaster
+# x-notaFinal
+# x-web
+# x-photo
+# x-docs
+
+# ---------------------------------------------------------------------------
+
+attributetype ( 1.1.2.1.1 NAME 'x-aprovat'
+    DESC 'true/false aprovat'
+    SYNTAX 1.3.6.1.4.1.1466.115.121.1.7
+    SINGLE-VALUE
+    )
+
+attributetype ( 1.1.2.1.2 NAME 'x-nomMaster'
+    DESC 'nom del master'
+    EQUALITY caseIgnoreMatch
+    SUBSTR caseIgnoreSubstringsMatch
+    SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+    SINGLE-VALUE )
+
+attributetype ( 1.1.2.1.3 NAME 'x-notaFinal'
+    DESC 'dorsal del jugador'
+    EQUALITY integerMatch
+    ORDERING integerOrderingMatch
+    SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+    SINGLE-VALUE )
+
+attributetype ( 1.1.2.1.4 NAME 'x-web'
+    DESC 'pagina(s) web del alumne'
+    SYNTAX 1.3.6.1.4.1.1466.115.121.1.26
+    )
+
+attributetype ( 1.1.2.1.5 NAME 'x-photo'
+    DESC 'fotografia/es del alumne'
+    SYNTAX 1.3.6.1.4.1.1466.115.121.1.28
+    )
+
+attributetype ( 1.1.2.1.5 NAME 'x-docs'
+    DESC 'document/s del alumne'
+    SYNTAX 1.3.6.1.4.1.1466.115.121.1.5
+    )
+
+objectclass ( 1.1.2.2.1 NAME 'x-Master'
+    DESC 'Master universitari del usuari'
+    SUP inetOrgPerson
+    STRUCTURAL
+    MUST ( x-aprovat $ x-descripcio $ x-notaFinal )
+    MAY ( x-web $ x-photo $ x-docs )
+    )
+
+
