@@ -1,7 +1,7 @@
 dn: uid=pau,ou=usuaris,dc=edt,dc=org
 changetype: modify
-add: objectClass
-objectClass: x-Master
+add: objectclass
+objectclass: x-Master
 -
 add: x-aprovat
 x-aprovat: true
@@ -10,10 +10,11 @@ add: x-nomMaster
 x-nomMaster: Onanismo desbocado
 -
 add: x-photo
-x-photo:< file:///opt/docker/photo5.jpeg
+x-photo:< file:///opt/docker/photo5.jpg
 -
 add: x-docs
-x-notaFinal:< file:///opt/docker/01.pdf
-
-
+x-docs:< file:///opt/docker/01.pdf
+-
+add: x-notaFinal
+x-notaFinal: 10
 

@@ -39,7 +39,7 @@ attributetype ( 1.1.2.1.5 NAME 'x-photo'
     SYNTAX 1.3.6.1.4.1.1466.115.121.1.28
     )
 
-attributetype ( 1.1.2.1.5 NAME 'x-docs'
+attributetype ( 1.1.2.1.6 NAME 'x-docs'
     DESC 'document/s del alumne'
     SYNTAX 1.3.6.1.4.1.1466.115.121.1.5
     )

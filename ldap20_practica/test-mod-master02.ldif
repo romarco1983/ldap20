@@ -1,7 +1,7 @@
 dn: uid=user01,ou=usuaris,dc=edt,dc=org
 changetype: modify
-add: objectClass
-objectClass: x-Master
+add: objectclass
+objectclass: x-Master
 -
 add: x-aprovat
 x-aprovat: false
@@ -9,22 +9,25 @@ x-aprovat: false
 add: x-nomMaster
 x-nomMaster: Sexador de ocells
 -
+add: x-notaFinal
+x-notaFinal: 6
+-
 add: x-web
 x-web: www.todossomoseta.org
 -
 add: x-photo
-x-photo:< file:///opt/docker/photo1.jpeg
+x-photo:< file:///opt/docker/photo1.jpg
 -
 add: x-photo
-x-photo:< file:///opt/docker/photo2.jpeg
+x-photo:< file:///opt/docker/photo2.jpg
 -
 add: x-docs
-x-notaFinal:< file:///opt/docker/02.pdf
+x-docs:< file:///opt/docker/02.pdf
 
 dn: uid=user02,ou=usuaris,dc=edt,dc=org
 changetype: modify
-add: objectClass
-objectClass: x-Master
+add: objectclass
+objectclass: x-Master
 -
 add: x-aprovat
 x-aprovat: true
@@ -32,19 +35,25 @@ x-aprovat: true
 add: x-nomMaster
 x-nomMaster: ASO
 -
+add: x-NotaFinal
+x-notaFinal: 9
+-
 add: x-web
 x-web: www.asixm06.cat
 -
 add: x-photo
-x-photo:< file:///opt/docker/photo3.jpeg
+x-photo:< file:///opt/docker/photo3.jpg
 
 dn: uid=user03,ou=usuaris,dc=edt,dc=org
 changetype: modify
-add: objectClass
-objectClass: x-Master
+add: objectclass
+objectclass: x-Master
 -
 add: x-aprovat
 x-aprovat: false
+-
+add: x-NotaFinal
+x-notaFinal: 4
 -
 add: x-nomMaster
 x-nomMaster: Catador de cervesa
@@ -53,7 +62,7 @@ add: x-web
 x-web: www.vivalacata.net
 -
 add: x-photo
-x-photo:< file:///opt/docker/photo4.jpeg
+x-photo:< file:///opt/docker/photo4.jpg
 -
 add: x-docs
 x-notaFinal:< file:///opt/docker/03.pdf
