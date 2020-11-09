@@ -6,7 +6,7 @@
 # x-web
 # x-photo
 # x-docs
-
+# 
 # ---------------------------------------------------------------------------
 
 attributetype ( 1.1.2.1.1 NAME 'x-aprovat'
@@ -46,9 +46,9 @@ attributetype ( 1.1.2.1.5 NAME 'x-docs'
 
 objectclass ( 1.1.2.2.1 NAME 'x-Master'
     DESC 'Master universitari del usuari'
-    SUP inetOrgPerson
     STRUCTURAL
-    MUST ( x-aprovat $ x-descripcio $ x-notaFinal )
+    SUP inetOrgPerson
+    MUST ( x-aprovat $ x-nomMaster $ x-notaFinal )
     MAY ( x-web $ x-photo $ x-docs )
     )
 

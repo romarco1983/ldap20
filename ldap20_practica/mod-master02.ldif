@@ -1,0 +1,65 @@
+dn: uid=user01,ou=usuaris,dc=edt,dc=org
+changetype: modify
+add: objectClass
+objectClass: x-Master
+-
+add: x-aprovat
+x-aprovat: false
+-
+add: x-nomMaster
+x-nomMaster: Sexador de ocells
+-
+add: x-web
+x-web: www.todossomoseta.org
+-
+add: x-photo
+x-photo:< file:///opt/docker/photo1.jpeg
+-
+add: x-photo
+x-photo:< file:///opt/docker/photo2.jpeg
+-
+add: x-docs
+x-notaFinal:< file:///opt/docker/02.pdf
+
+dn: uid=user02,ou=usuaris,dc=edt,dc=org
+changetype: modify
+add: objectClass
+objectClass: x-Master
+-
+add: x-aprovat
+x-aprovat: true
+-
+add: x-nomMaster
+x-nomMaster: ASO
+-
+add: x-web
+x-web: www.asixm06.cat
+-
+add: x-photo
+x-photo:< file:///opt/docker/photo3.jpeg
+
+dn: uid=user03,ou=usuaris,dc=edt,dc=org
+changetype: modify
+add: objectClass
+objectClass: x-Master
+-
+add: x-aprovat
+x-aprovat: false
+-
+add: x-nomMaster
+x-nomMaster: Catador de cervesa
+-
+add: x-web
+x-web: www.vivalacata.net
+-
+add: x-photo
+x-photo:< file:///opt/docker/photo4.jpeg
+-
+add: x-docs
+x-notaFinal:< file:///opt/docker/03.pdf
+-
+add: x-docs
+x-notaFinal:< file:///opt/docker/04.pdf
+
+
+
