@@ -1,5 +1,4 @@
-! /bin/bash
-ulimit -n 1024
+#! /bin/bash
 bash /opt/docker/install.sh
 /sbin/slapd -d0
 
