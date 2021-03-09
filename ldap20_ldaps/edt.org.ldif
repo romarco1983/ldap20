@@ -1,8 +1,3 @@
-# Llistat total de la organitzacio dc=edt,dc=org
-# @edt 2016
-# M06-ASO
-# -----------------------------------------------
-
 dn: dc=edt,dc=org
 dc: edt
 description: Escola del treball de Barcelona
@@ -30,53 +25,10 @@ ou: usuaris
 description: Container per usuaris del sistema linux
 objectclass: organizationalunit
 
-dn: ou=hosts,dc=edt,dc=org
-ou: hosts
-description: Container per a hosts linux
+dn: ou=grups,dc=edt,dc=org
+ou: grups
+description: Container per a grups del sistema linux
 objectclass: organizationalunit
-
-dn: ou=keys,dc=edt,dc=org
-ou: keys
-description: Container per a keys linux
-objectclass: organizationalunit
-
-dn: ou=certs,dc=edt,dc=org
-ou: certs
-description: Container per a certs linux
-objectclass: organizationalunit
-
-dn: ou=domains,dc=edt,dc=org
-ou: domains
-description: Container per a domains linux
-objectclass: organizationalunit
-
-dn: o=asia,ou=clients,dc=edt,dc=org 
-o: asia
-description: Clients del continent de asia
-objectclass: organization
-
-dn: o=africa,ou=clients,dc=edt,dc=org
-o: africa
-description: Clients del continent de africa
-objectclass: organization
-
-dn: o=europa,ou=clients,dc=edt,dc=org
-o: europa
-description: Clients del continent de europa
-objectclass: organization
-
-dn: o=eu,o=europa,ou=clients,dc=edt,dc=org
-o: eu
-description: Clients del continent europa: unio europea
-objectclass: organization
-
-dn: o=noneu,o=europa,ou=clients,dc=edt,dc=org
-o: noneu
-description: Clients del continent europa: no unio europea
-objectclass: organization
-
-
-# ---------- Usuaris ----------------------------
 
 dn: uid=pau,ou=usuaris,dc=edt,dc=org
 objectclass: posixAccount
@@ -90,7 +42,7 @@ description: Watch out for this guy
 ou: Profes
 uid: pau
 uidNumber: 5000
-gidNumber: 100
+gidNumber: 601
 homeDirectory: /tmp/home/pau
 userPassword: {SSHA}NDkipesNQqTFDgGJfyraLz/csZAIlk2/
 
@@ -105,7 +57,7 @@ description: Watch out for this guy
 ou: Profes
 uid: pere
 uidNumber: 5001
-gidNumber: 100
+gidNumber: 601
 homeDirectory: /tmp/home/pere
 userPassword: {SSHA}ghmtRL11YtXoUhIP7z6f7nb8RCNadFe+
 
@@ -140,7 +92,7 @@ gidNumber: 600
 homeDirectory: /tmp/home/marta
 userPassword: {SSHA}9+1F2f5vcW8z/tmSzYNWdlz5GbDCyoOw
 
-dn: uid=Jordi,ou=usuaris,dc=edt,dc=org
+dn: uid=jordi,ou=usuaris,dc=edt,dc=org
 objectclass: posixAccount
 objectclass: inetOrgPerson
 cn: Jordi Mas
@@ -153,7 +105,7 @@ ou: Alumnes
 ou: Profes
 uid: jordi
 uidNumber: 5004
-gidNumber: 100
+gidNumber: 601
 homeDirectory: /tmp/home/jordi
 userPassword: {SSHA}T5jrMgpJwZZgu0azkLIVoYhiG08/KGUv
 
@@ -216,7 +168,7 @@ homephone: 555-222-0003
 mail: user03@edt.org
 description: alumne de 1asix
 ou: 1asix
-uid: user03
+uid: user02
 uidNumber: 7003
 gidNumber: 610
 homeDirectory: /tmp/home/1asix/user03
@@ -334,259 +286,29 @@ gidNumber: 611
 homeDirectory: /tmp/home/2asix/user10
 userPassword: {SHA}ovf8ta/reYP/u2zj0afpHt8yE1A=
 
-# ---------- Clients ----------------------------
 
-dn: uid=mao,o=asia,ou=clients,dc=edt,dc=org
-objectclass: posixAccount
-objectclass: inetOrgPerson
-cn: mao tse tung
-cn: mao zedong
-sn: mao
-homephone: 777-222-0001
-mail: mao@asia.edt.org
-description: client de zong guo
-ou: 1wiaw
-uid: mao
-uidNumber: 11001
-gidNumber: 650
-homeDirectory: /tmp/home/1wiaw/mao
-userPassword: {SHA}89F9x2P5XmKafnH54qLunfQ8h0Y=
-
-dn: uid=ho,o=asia,ou=clients,dc=edt,dc=org
-objectclass: posixAccount
-objectclass: inetOrgPerson
-cn: ho chi minh
-sn: ho
-homephone: 777-222-0002
-mail: ho@asia.edt.org
-description: client de vietnam
-ou: 1wiaw
-uid: ho
-uidNumber: 11002
-gidNumber: 650
-homeDirectory: /tmp/home/1wiaw/ho
-userPassword: {SHA}mnaoV605m0kroBh50PotcX5EMLI=
-
-dn: uid=hirohito,o=asia,ou=clients,dc=edt,dc=org
-objectclass: posixAccount
-objectclass: inetOrgPerson
-cn: hirohito
-sn: hiro
-homephone: 777-222-0003
-mail: hiro@asia.edt.org
-description: client de japo
-ou: 1wiaw
-uid: hiro
-uidNumber: 11003
-gidNumber: 650
-homeDirectory: /tmp/home/1wiaw/hiro
-userPassword: {SHA}bylNbPKEKAirTNxHDMoNj8jHrKA=
-
-dn: uid=nelson,o=africa,ou=clients,dc=edt,dc=org
-objectclass: posixAccount
-objectclass: inetOrgPerson
-cn: nelson mandela
-cn: madiba
-sn: nelson
-homephone: 778-222-0004
-mail: nelson@africa.edt.org
-description: client de sud africa
-ou: 1wiaw
-uid: nelson
-uidNumber: 11004
-gidNumber: 650
-homeDirectory: /tmp/home/1wiaw/nelson
-userPassword: {SHA}2RX06XDlNlQgLBz1xi5gpygKghk=
-
-dn: uid=robert,o=africa,ou=clients,dc=edt,dc=org
-objectclass: posixAccount
-objectclass: inetOrgPerson
-cn: robert mugabe
-sn: robert
-homephone: 778-222-0005
-mail: robert@africa.edt.org
-description: client de rodesia, zimbawe
-ou: 1wiaw
-uid: robert
-uidNumber: 11005
-gidNumber: 650
-homeDirectory: /tmp/home/1wiaw/robert
-userPassword: {SHA}EukpPsazDH+ooJJq9CgH6SnBaE8=
-
-dn: uid=ali,o=africa,ou=clients,dc=edt,dc=org
-objectclass: posixAccount
-objectclass: inetOrgPerson
-cn: ali bey
-cn: domenech badia
-sn: ali
-homephone: 778-222-0006
-mail: ali@africa.edt.org
-description: client de magreb, arabia
-ou: 1wiaw
-uid: ali
-uidNumber: 11006
-gidNumber: 650
-homeDirectory: /tmp/home/1wiaw/ali
-userPassword: {SHA}tCptk9eWkVIi9v+y/91hN9k8HNs=
-
-dn: uid=konrad,o=eu,o=europa,ou=clients,dc=edt,dc=org
-objectclass: posixAccount
-objectclass: inetOrgPerson
-cn: konrad adenauer
-sn: konrad
-homephone: 779-222-0007
-mail: konrad@eu.europa.edt.org
-description: client de alemanya
-ou: 2wiaw
-uid: konrad
-uidNumber: 11007
-gidNumber: 651
-homeDirectory: /tmp/home/2wiaw/konrad
-userPassword: {SHA}v7M/0OfTWcdI9irH59W8m7FgL6k=
-
-dn: uid=humphrey,o=eu,o=europa,ou=clients,dc=edt,dc=org
-objectclass: posixAccount
-objectclass: inetOrgPerson
-cn: humpprey appleby
-sn: humphrey
-homephone: 779-222-0008
-mail: humprey@eu.europa.edt.org
-description: client de united kingdom
-ou: 2wiaw
-uid: humphrey
-uidNumber: 11008
-gidNumber: 651
-homeDirectory: /tmp/home/2wiaw/humphrey
-userPassword: {SHA}6WvUsL4qewGBxPBk0xxwZq8jSFk=
-
-dn: uid=carles,o=eu,o=europa,ou=clients,dc=edt,dc=org
-objectclass: posixAccount
-objectclass: inetOrgPerson
-cn: carles puig
-sn: carles
-homephone: 779-222-0009
-mail: carles@eu.europa.edt.org
-description: client de polonia
-ou: 2wiaw
-uid: carles
-uidNumber: 11009
-gidNumber: 651
-homeDirectory: /tmp/home/2wiaw/carles
-userPassword: {SHA}N59JHsqofesnS/uN/hTgYniAHVc=
-
-dn: uid=paco,o=noneu,o=europa,ou=clients,dc=edt,dc=org
-objectclass: posixAccount
-objectclass: inetOrgPerson
-cn: francisco paco culona
-cn: paca
-sn: francisco
-homephone: 779-222-0010
-mail: paco@noneu.europa.edt.org
-description: client de is different
-ou: 2wiaw
-uid: paco
-uidNumber: 11010
-gidNumber: 651
-homeDirectory: /tmp/home/2wiaw/paco
-userPassword: {SHA}ExWuYilEQ2eWipQ6IZ843vmoES0=
-
-dn: uid=vladimir,o=noneu,o=europa,ou=clients,dc=edt,dc=org
-objectclass: posixAccount
-objectclass: inetOrgPerson
-cn: vladimir putin
-sn: vladimir
-homephone: 779-222-0011
-mail: vladimir@noneu.europa.edt.org
-description: client de rusia
-ou: 2wiaw
-uid: vladimir
-uidNumber: 11011
-gidNumber: 651
-homeDirectory: /tmp/home/2wiaw/vladimir
-userPassword: {SHA}3JGGoGB4czkVpvy6s05ZEgvitIQ=
-
-dn: uid=jorge,o=noneu,o=europa,ou=clients,dc=edt,dc=org
-objectclass: posixAccount
-objectclass: inetOrgPerson
-cn: jorge mario bergoglio
-cn: francisco
-cn: papa
-cn: sua santidad
-sn: jorge
-homephone: 779-222-0012
-mail: jorge@noneu.europa.edt.org
-description: client del cel
-ou: 2wiaw
-uid: jorge
-uidNumber: 11012
-gidNumber: 651
-homeDirectory: /tmp/home/2wiaw/jorge
-userPassword: {SHA}M/knNE4HngDT+kXYgzsE5zUiPuw=
-
-# ---------- Grups ------------------------------
-
-dn: ou=grups,dc=edt,dc=org
-ou: groups
-description: Container per a grups
-objectclass: organizationalunit
-
-dn: cn=cup,ou=grups,dc=edt,dc=org
-cn: cup
-gidNumber: 0
-description: Grup de la CUP, es a dir, els root del systema
-memberUid: admin
+dn: cn=professors,ou=grups,dc=edt,dc=org
 objectclass: posixGroup
+cn: professors
+gidNumber: 601
+description: Grup de professors
+memberUid: pau
+memberUid: pere
+memberUid: jordi
 
-dn: cn=admin,ou=grups,dc=edt,dc=org
-cn: admin
-cn: system
-gidNumber: 10
-description: Grup de administracio system
-memberUid: admin
-objectclass: posixGroup
 
 dn: cn=alumnes,ou=grups,dc=edt,dc=org
+objectclass: posixGroup
 cn: alumnes
 gidNumber: 600
 description: Grup de alumnes
 memberUid: anna
-memberuid: marta
-memberUid: Jordi
-objectclass: posixGroup
+memberUid: marta
+memberUid: jordi
 
-dn: cn=profes,ou=grups,dc=edt,dc=org
-cn: profes
-gidNumber: 100
-description: Grup de profes
-memberUid: pau
-memberUid: pere
-objectclass: posixGroup
-
-dn: cn=1wiaw,ou=grups,dc=edt,dc=org
-cn: 1wiaw
-gidNumber: 650
-description: Grup de 1wiaw
-memberUid: mao
-memberUid: ho
-memberUid: hirohito
-memberUid: nelson
-memberUid: robert
-memberUid: ali
-objectclass: posixGroup
-
-dn: cn=2wiaw,ou=grups,dc=edt,dc=org
-cn: 2wiaw
-gidNumber: 651
-description: Grup de 2wiaw
-memberUid: konrad
-memberUid: humphrey
-memberUid: carles
-memberUid: francisco
-memberUid: vladimir
-memberUid: jorge
-objectclass: posixGroup
 
 dn: cn=1asix,ou=grups,dc=edt,dc=org
+objectclass: posixGroup
 cn: 1asix
 gidNumber: 610
 description: Grup de 1asix
@@ -595,9 +317,10 @@ memberUid: user02
 memberUid: user03
 memberUid: user04
 memberUid: user05
-objectclass: posixGroup
+memberUid: user06
 
 dn: cn=2asix,ou=grups,dc=edt,dc=org
+objectclass: posixGroup
 cn: 2asix
 gidNumber: 611
 description: Grup de 2asix
@@ -606,6 +329,32 @@ memberUid: user07
 memberUid: user08
 memberUid: user09
 memberUid: user10
+
+dn: cn=wheel,ou=grups,dc=edt,dc=org
 objectclass: posixGroup
+cn: wheel
+gidNumber: 10
+description: Grup de wheel
+memberUid: admin
+
+dn: cn=1wiam,ou=grups,dc=edt,dc=org
+objectclass: posixGroup
+cn: 1wiam
+gidNumber: 612
+description: Grup de 1wiam
+
+dn: cn=2wiam,ou=grups,dc=edt,dc=org
+objectclass: posixGroup
+cn: 2wiam
+gidNumber: 612
+description: Grup de 2wiam
+
+dn: cn=1hiaw,ou=grups,dc=edt,dc=org
+objectclass: posixGroup
+cn: 1hiaw
+gidNumber: 614
+description: Grup de 1hiaw
+
+
 
 

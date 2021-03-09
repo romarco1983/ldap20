@@ -1,9 +1,0 @@
-dn: cn=Pau Pou,ou=usuaris,dc=edt,dc=org
-changetype: modify
-detele: homePhone
--
-add: homePhone
-homePhone: 123456789
--
-replace: mail
-mail: binladen@bum
